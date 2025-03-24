@@ -1,0 +1,122 @@
+.navMidLink {
+  position: relative;
+
+  &.active {
+    color: var(--color-red);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      border: 10px solid;
+      border-color: transparent transparent var(--color-red) transparent;
+    }
+  }
+}
+
+/* small nav */
+.barsMenu {
+  position: relative;
+  height: 30%;
+  width: 35px;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: inherit;
+    background-color: white;
+    transition: 0.3s;
+
+    &:nth-child(1) {
+      top: 0px;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+    }
+
+    &:nth-child(3) {
+      top: 20px;
+    }
+  }
+
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 10px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 10px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.smallNavLinks {
+  max-height: 0px;
+  transition: max-height 0.3s ease-in;
+  overflow: hidden;
+
+  a {
+    border: 0.5px solid rgba(45, 45, 45, 0.148);
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: 0.5s;
+    &:hover,
+    &.active {
+      background-color: white;
+      color: var(--color-red);
+    }
+  }
+  &.open {
+    max-height: 600px;
+    a {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}
+
+/* home */
+.homeNav {
+  a {
+    padding-inline-end: 10px;
+    font-size: 12px;
+    cursor: auto;
+    &:not(:last-child) {
+      cursor: pointer;
+      color: var(--color-blue);
+      font-weight: 600;
+
+      &:hover {
+        color: var(--color-red);
+        text-decoration: underline;
+      }
+
+      &::after {
+        content: ">";
+        padding-inline-start: 10px;
+      }
+    }
+  }
+}
+
+.swiperLink {
+  &:hover,
+  &.active {
+    color: var(--color-blue);
+    border-color: var(--color-blue);
+  }
+}

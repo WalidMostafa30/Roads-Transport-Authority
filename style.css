@@ -1,8 +1,8 @@
 @import "tailwind.css";
 
 :root {
-  --color: #ee0000;
-  --color-blue: #0000b6;
+  --color-red: #ee0000;
+  --color-blue: #171c8f;
 }
 
 ::-webkit-scrollbar {
@@ -16,125 +16,46 @@ body {
   font-family: "Cairo", sans-serif;
 }
 
-.navMidLink {
-  position: relative;
+.myHeadTitle {
+  padding-block: 20px;
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 
-  &.active {
-    color: var(--color);
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      border: 10px solid;
-      border-color: transparent transparent var(--color) transparent;
+  @media screen and (min-width: 992px) {
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 18px;
     }
   }
 }
 
-/* small nav */
-.barsMenu {
-  position: relative;
-  height: 30%;
-  width: 35px;
-  cursor: pointer;
-
-  span {
-    position: absolute;
-    left: 0;
-    height: 4px;
-    width: inherit;
-    background-color: white;
-    transition: 0.3s;
-
-    &:nth-child(1) {
-      top: 0px;
-    }
-
-    &:nth-child(2) {
-      top: 10px;
-    }
-
-    &:nth-child(3) {
-      top: 20px;
-    }
+.myTitle {
+  margin-bottom: 20px;
+  h2 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
+    margin-top: 10px;
   }
 
-  &.open {
-    span {
-      &:nth-child(1) {
-        top: 10px;
-        transform: rotate(45deg);
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-      }
-
-      &:nth-child(3) {
-        top: 10px;
-        transform: rotate(-45deg);
-      }
+  @media screen and (min-width: 992px) {
+    h2 {
+      font-size: 32px;
+      font-weight: bold;
     }
-  }
-}
-
-.smallNavLinks {
-  max-height: 0px;
-  transition: max-height 0.3s ease-in;
-  overflow: hidden;
-
-  a {
-    border: 0.5px solid rgba(45, 45, 45, 0.148);
-    transform: translateY(-40px);
-    opacity: 0;
-    transition: 0.5s;
-    &:hover,
-    &.active {
-      background-color: white;
-      color: var(--color);
+    p {
+      font-size: 18px;
     }
-  }
-  &.open {
-    max-height: 600px;
-    a {
-      transform: translateY(0px);
-      opacity: 1;
-    }
-  }
-}
-
-/* home */
-.homeNav {
-  a {
-    padding-inline-end: 10px;
-    font-size: 12px;
-    cursor: auto;
-    &:not(:last-child) {
-      cursor: pointer;
-      color: #0000b6;
-      font-weight: 600;
-
-      &:hover {
-        color: var(--color);
-        text-decoration: underline;
-      }
-
-      &::after {
-        content: ">";
-        padding-inline-start: 10px;
-      }
-    }
-  }
-}
-
-.swiperLink {
-  &:hover,
-  &.active {
-    color: rgb(0, 0, 155);
-    border-color: rgb(0, 0, 155);
   }
 }

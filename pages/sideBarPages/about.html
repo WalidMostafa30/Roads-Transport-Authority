@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roads & Transport Authority</title>
-    <!-- Google Fonts, Font Awesome, Swiper CSS, and Tailwind CSS -->
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,555 +17,569 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Tailwind CSS custom theme and component utilities -->
+    <!-- Tailwind custom color -->
     <style type="text/tailwindcss">
       @theme {
         --color-redClr: #ee0000;
-        --color-blueClr: #0000b6;
+        --color-blueClr: #171c8f;
+        --color-grayClr1: #f5f5f5;
+        --color-grayClr2: #a8aaac;
+        --color-grayClr3: #53565a;
       }
-      /* @layer components {
-        .bottomNavLink {
-          @apply px-5 h-full content-center hover:bg-white hover:text-redClr duration-300;
+      @layer components {
+        .myContainer {
+          @apply container mx-auto px-3;
         }
-      } */
+        .mySecPadding {
+          @apply py-3 lg:py-8;
+        }
+      }
     </style>
+    <!-- css link -->
     <link rel="stylesheet" href="../../style.css" />
   </head>
+
   <body>
-    <!-- header -->
-    <header class="container m-auto px-3">
-      <!-- Desktop Navigation -->
-      <div class="hidden xl:block">
-        <div class="flex justify-between items-center py-3">
-          <img
-            loading="lazy"
-            class="w-32 md:w-60"
-            src="https://ums.rta.ae/violations/content/header_footer/RTA.png"
-          />
-          <img
-            loading="lazy"
-            class="w-32 md:w-52"
-            src="https://ums.rta.ae/violations/content/header_footer/Dubai_Logo_New.svg"
-          />
+    <main>
+      <!-- header -->
+      <header class="myContainer">
+        <!-- Desktop Nav -->
+        <div class="hidden xl:block">
+          <!-- top header -->
+          <div class="flex justify-between items-center py-3">
+            <img
+              loading="lazy"
+              class="w-32 md:w-60"
+              src="https://ums.rta.ae/violations/content/header_footer/RTA.png"
+            />
+            <img
+              loading="lazy"
+              class="w-32 md:w-52"
+              src="https://ums.rta.ae/violations/content/header_footer/Dubai_Logo_New.svg"
+            />
+          </div>
+
+          <!-- bottom header -->
+          <div class="flex items-center justify-between py-2">
+            <nav class="flex items-center gap-3">
+              <a
+                href="#"
+                class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+                >الصفحة الرئيسية</a
+              >
+              <a
+                href="#"
+                class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+                >السائقون ومالكو المركبات</a
+              >
+              <a
+                href="#"
+                class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+                >المواصلات العامة</a
+              >
+              <a
+                href="#"
+                class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+                >قطاع الأعمال</a
+              >
+              <a
+                href="#"
+                class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+                >أصحاب الهمم</a
+              >
+            </nav>
+
+            <div class="flex items-center gap-3">
+              <a
+                href="#"
+                class="bg-grayClr1 py-3 px-4 rounded-full hover:text-redClr duration-300"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+              <a
+                href="#"
+                class="bg-grayClr1 py-3 px-4 rounded-full hover:text-redClr duration-300"
+                ><i class="fa-solid fa-wheelchair-move"></i
+              ></a>
+              <a
+                href="#"
+                class="bg-grayClr1 py-3 px-4 rounded-full hover:text-redClr duration-300"
+                >English</a
+              >
+              <a
+                href="#"
+                class="bg-grayClr1 py-3 px-4 rounded-full hover:text-redClr duration-300"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
+              <a
+                href="#"
+                class="bg-grayClr1 py-3 px-4 rounded-full hover:text-redClr duration-300"
+              >
+                <i class="fa-solid fa-circle-user"></i>
+                تسجيل الدخول
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="flex items-center justify-between py-2">
-          <nav class="flex items-center gap-3">
+        <!-- Mobile Nav -->
+        <div class="flex xl:hidden items-center justify-between py-2 relative">
+          <span class="aboutNavBtn text-xl"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
+
+          <img
+            loading="lazy"
+            class="w-34 md:w-60"
+            src="https://ums.rta.ae/violations/content/header_footer/RTA.png"
+          />
+
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+
+          <nav
+            class="aboutNav hidden flex-col bg-white absolute z-50 left-0 top-[100%] w-full p-2 shadow-xl"
+          >
             <a
               href="#"
-              class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+              class="text-sm font-semibold py-2 border-b border-grayClr2"
               >الصفحة الرئيسية</a
             >
             <a
               href="#"
-              class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+              class="text-sm font-semibold py-2 border-b border-grayClr2"
               >السائقون ومالكو المركبات</a
             >
             <a
               href="#"
-              class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+              class="text-sm font-semibold py-2 border-b border-grayClr2"
               >المواصلات العامة</a
             >
             <a
               href="#"
-              class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+              class="text-sm font-semibold py-2 border-b border-grayClr2"
               >قطاع الأعمال</a
             >
             <a
               href="#"
-              class="text-sm text-slate-700 font-semibold py-3 border-b-4 border-transparent hover:text-redClr hover:border-redClr duration-300"
+              class="text-sm font-semibold py-2 border-b border-grayClr2"
               >أصحاب الهمم</a
             >
           </nav>
-
-          <div class="flex items-center gap-3">
-            <a
-              href="#"
-              class="bg-gray-100 py-3 px-4 rounded-full hover:text-redClr duration-300"
-              ><i class="fa-solid fa-magnifying-glass"></i
-            ></a>
-            <a
-              href="#"
-              class="bg-gray-100 py-3 px-4 rounded-full hover:text-redClr duration-300"
-              ><i class="fa-solid fa-wheelchair-move"></i
-            ></a>
-            <a
-              href="#"
-              class="bg-gray-100 py-3 px-4 rounded-full hover:text-redClr duration-300"
-              >English</a
-            >
-            <a
-              href="#"
-              class="bg-gray-100 py-3 px-4 rounded-full hover:text-redClr duration-300"
-              ><i class="fa-solid fa-globe"></i
-            ></a>
-            <a
-              href="#"
-              class="bg-gray-100 py-3 px-4 rounded-full hover:text-redClr duration-300"
-            >
-              <i class="fa-solid fa-circle-user"></i>
-              تسجيل الدخول
-            </a>
-          </div>
         </div>
+      </header>
+
+      <!-- main nav titles -->
+      <div class="bg-grayClr1">
+        <ul class="myContainer py-2 flex items-center gap-3">
+          <li class="font-bold">الصفحة الرئيسية</li>
+          /
+          <li class="text-slate-700 text-sm font-semibold">عن الهيئة</li>
+        </ul>
       </div>
-      <!-- Mobile Navigation -->
-      <div class="flex xl:hidden items-center justify-between py-2 relative">
-        <span class="aboutNavBtn text-xl"
-          ><i class="fa-solid fa-bars"></i
-        ></span>
 
-        <img
-          loading="lazy"
-          class="w-32 md:w-60"
-          src="https://ums.rta.ae/violations/content/header_footer/RTA.png"
-        />
+      <!-- head title -->
+      <article class="bg-grayClr3 text-white">
+        <div class="myContainer myHeadTitle">
+          <h1>عن هيئة الطرق والمواصلات</h1>
+          <p>
+            دبي هي إحدى أسرع المدن تطوراً في العالم، الأمر الذي يجعل توفير مرافق
+            بنية تحتية بمعايير عالية أمراً حتمياً. كما أن توفير شبكة نقل متطورة
+            لسكان دبي هو أولويّة في جدول أعمال الحكومة، لذلك تسعى هيئة الطرق
+            والمواصلات لتحسين مرافق النقل العام وتطوير الطرق عبر الإمارة لجعل
+            السفر أكثر أمانًا وسلاسة.
+          </p>
+        </div>
+      </article>
 
-        <span><i class="fa-solid fa-magnifying-glass"></i></span>
-
-        <nav
-          class="aboutNav hidden flex-col bg-white absolute z-50 left-0 top-[100%] w-full p-2 shadow-xl"
-        >
-          <a
-            href="#"
-            class="text-sm font-semibold py-2 border-b border-gary-400"
-            >الصفحة الرئيسية</a
+      <section class="bg-grayClr3 pt-10 text-white hidden xl:block">
+        <nav class="myContainer flex items-center">
+          <a href="#" class="text-xl p-5 bg-white text-blueClr">اكتشف الهيئة</a>
+          <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
+            >الاستدامة</a
           >
-          <a
-            href="#"
-            class="text-sm font-semibold py-2 border-b border-gary-400"
-            >السائقون ومالكو المركبات</a
+          <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
+            >مجلس المديرين</a
           >
-          <a
-            href="#"
-            class="text-sm font-semibold py-2 border-b border-gary-400"
-            >المواصلات العامة</a
+          <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
+            >السياسات والاجراءات</a
           >
-          <a
-            href="#"
-            class="text-sm font-semibold py-2 border-b border-gary-400"
-            >قطاع الأعمال</a
+          <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
+            >متعاملونا</a
           >
-          <a
-            href="#"
-            class="text-sm font-semibold py-2 border-b border-gary-400"
-            >أصحاب الهمم</a
+          <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
+            >المشاريع</a
+          >
+          <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
+            >المركز الإعلامي</a
           >
         </nav>
-      </div>
-    </header>
+      </section>
 
-    <!-- nav title -->
-    <div class="bg-gray-100">
-      <ul class="container m-auto px-3 py-2 flex items-center gap-3">
-        <li class="font-bold">الصفحة الرئيسية</li>
-        /
-        <li class="text-slate-700 text-sm font-semibold">عن الهيئة</li>
-      </ul>
-    </div>
-
-    <!-- head title -->
-    <div class="bg-gray-500 text-white">
-      <div class="container m-auto px-3 py-5">
-        <h1 class="text-2xl md:text-4xl font-bold mb-3">
-          عن هيئة الطرق والمواصلات
-        </h1>
-        <p>
-          دبي هي إحدى أسرع المدن تطوراً في العالم، الأمر الذي يجعل توفير مرافق
-          بنية تحتية بمعايير عالية أمراً حتمياً. كما أن توفير شبكة نقل متطورة
-          لسكان دبي هو أولويّة في جدول أعمال الحكومة، لذلك تسعى هيئة الطرق
-          والمواصلات لتحسين مرافق النقل العام وتطوير الطرق عبر الإمارة لجعل
-          السفر أكثر أمانًا وسلاسة.
-        </p>
-      </div>
-    </div>
-
-    <section class="bg-gray-500 text-white hidden xl:block">
-      <nav class="container m-auto px-3 flex items-center">
-        <a href="#" class="text-xl p-5 bg-white text-blueClr">اكتشف الهيئة</a>
-        <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
-          >الاستدامة</a
-        >
-        <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
-          >مجلس المديرين</a
-        >
-        <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
-          >السياسات والاجراءات</a
-        >
-        <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
-          >متعاملونا</a
-        >
-        <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
-          >المشاريع</a
-        >
-        <a href="#" class="text-xl p-5 hover:bg-gray-400 duration-300"
-          >المركز الإعلامي</a
-        >
-      </nav>
-    </section>
-
-    <section class="container m-auto p-3">
-      <h4 class="mb-2">تعرّف على هيئة الطرق والمواصلات عن قرب</h4>
-
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-col-4 gap-5"
-      >
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>رؤيتنا ورسالتنا</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>قيمنا</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>الغايات والاهداف الإستراتيجية</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>جسر التواصل</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>البيانات المفتوحة</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>الابتكار في هيئة الطرق والمواصلات</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>المركبات ذاتية القيادة</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>برنامج الحريص</p>
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-4 text-blueClr font-bold px-2 py-6 border-b border-gray-200 hover:bg-gray-200 duration-300"
-        >
-          <i class="fa-solid fa-chevron-left"></i>
-          <p>مسار الدراجات</p>
-        </a>
-      </div>
-
-      <button class="flex items-center cursor-pointer my-3">
-        <span class="bg-redClr text-white p-3"
-          ><i class="fa-solid fa-chevron-left"></i
-        ></span>
-        <span
-          class="p-3 text-redClr font-bold hover:text-white hover:bg-redClr duration-300"
-          >عرض الكل</span
-        >
-      </button>
-    </section>
-
-    <section class="container m-auto p-3">
-      <h4 class="text-2xl md:text-4xl font-bold mb-3">تطبيقات الهيئة</h4>
-      <p>
-        تسعى الهيئة لإسعادك وتسعى لدعم مدينة دبي للتحول الى مدينة ذكية وتعمل على
-        تعزيز أهدافها الاستراتيجية ولتحقيق كل هذا توفر الهيئة خاصية سهولة الوصول
-        لخدماتها عبر التطبيقات الذكية المصممة لتلبية احتياجاتك
-      </p>
-
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-3 gap-3 lg:gap-0"
-      >
-        <div class="flex flex-row lg:flex-col items-center gap-3 p-3 border">
-          <img
-            class="w-20 lg:w-40"
-            src="https://www.rta.ae/wps/wcm/connect/rta/7491d5b5-ee47-419a-b733-9d902c9d639b/rta-dubai-app.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_N004G041LOBR60AUHP2NT32000-7491d5b5-ee47-419a-b733-9d902c9d639b-oKeYvqW"
-          />
-          <p class="font-bold lg:text-xl">هيئة الطرق والمواصلات</p>
+      <section class="myContainer mySecPadding">
+        <div class="myTitle">
+          <p>تعرّف على هيئة الطرق والمواصلات عن قرب</p>
         </div>
 
-        <div class="flex flex-row lg:flex-col items-center gap-3 p-3 border">
-          <img
-            class="w-20 lg:w-40"
-            src="https://www.rta.ae/wps/wcm/connect/rta/1aef5f2f-01c7-4f8f-b151-b2dc3dd882b8/dtc-app-logo.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_N004G041LOBR60AUHP2NT32000-1aef5f2f-01c7-4f8f-b151-b2dc3dd882b8-oKfkVfV"
-          />
-          <p class="font-bold lg:text-xl">تطبيق DTC APP</p>
-        </div>
-
-        <div class="flex flex-row lg:flex-col items-center gap-3 p-3 border">
-          <img
-            class="w-20 lg:w-40"
-            src="https://www.rta.ae/wps/wcm/connect/rta/3c77ce37-d96b-4f99-8df3-8a719841e5ab/Shail.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_N004G041LOBR60AUHP2NT32000-3c77ce37-d96b-4f99-8df3-8a719841e5ab-oWJfNF0"
-          />
-          <p class="font-bold lg:text-xl">سهيل</p>
-        </div>
-      </div>
-
-      <button class="flex items-center cursor-pointer my-3">
-        <span class="bg-blueClr text-white p-3"
-          ><i class="fa-solid fa-chevron-left"></i
-        ></span>
-        <span
-          class="p-3 text-blueClr font-bold hover:text-white hover:bg-blueClr duration-300"
-          >عرض الكل</span
-        >
-      </button>
-    </section>
-
-    <section class="container m-auto p-3">
-      <h4 class="text-2xl md:text-4xl font-bold text-gray-500 mb-3">
-        شارك معنا
-      </h4>
-      <p>نحن هنا من أجلك، فلا تتردد وتواصل معنا عبر القنوات التالية:</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4">
         <div
-          class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-col-4 gap-5"
         >
-          <span class="text-4xl text-blueClr mb-3 mx-auto"
-            ><i class="fa-solid fa-headset"></i
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>رؤيتنا ورسالتنا</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>قيمنا</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>الغايات والاهداف الإستراتيجية</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>جسر التواصل</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>البيانات المفتوحة</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>الابتكار في هيئة الطرق والمواصلات</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>المركبات ذاتية القيادة</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>برنامج الحريص</p>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-4 text-blueClr font-bold p-2 lg:py-6 border-b border-grayClr2 hover:bg-grayClr1 duration-300"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+            <p>مسار الدراجات</p>
+          </a>
+        </div>
+
+        <button class="flex items-center cursor-pointer my-3">
+          <span class="bg-redClr text-white p-3"
+            ><i class="fa-solid fa-chevron-left"></i
           ></span>
-          <h4 class="font-bold text-md">تحدّث مع محبوب</h4>
-          <p class="text-xs lg:text-sm">تحدًث وقدًم على خدماتنا مع محبوب</p>
-        </div>
-        <div
-          class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
-        >
-          <span class="text-4xl text-blueClr mb-3 mx-auto"
-            ><i class="fa-solid fa-envelope"></i
-          ></span>
-          <h4 class="font-bold text-md">راسلنا</h4>
-          <p class="text-xs lg:text-sm">راسلنا عبر البريد الإلكتروني</p>
-        </div>
-        <div
-          class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
-        >
-          <span class="text-4xl text-blueClr mb-3 mx-auto"
-            ><i class="fa-solid fa-hands-holding-circle"></i
-          ></span>
-          <h4 class="font-bold text-md">مجلس محمد بن راشد الذكي</h4>
-          <p class="text-xs lg:text-sm">ساهم في بناء مستقبل دبي</p>
-        </div>
-        <div
-          class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
-        >
-          <span class="text-4xl text-blueClr mb-3 mx-auto"
-            ><i class="fa-solid fa-comments"></i
-          ></span>
-          <h4 class="font-bold text-md">الآراء والأفكار</h4>
-          <p class="text-xs lg:text-sm">ارسل أفكارك أو شكواك أو استفسارك</p>
-        </div>
-      </div>
-    </section>
+          <span
+            class="p-3 text-redClr font-bold hover:text-white hover:bg-redClr duration-300"
+            >عرض الكل</span
+          >
+        </button>
+      </section>
 
-    <!-- footer -->
-    <footer>
-      <!-- Toggle -->
-      <div class="bg-gray-600 text-white">
-        <div
-          class="discoverToggle flex justify-center items-center gap-3 text-lg p-3 cursor-pointer"
-        >
-          <p>اكتشف المزيد</p>
-          <span id="arrowIcon" class="duration-200">
-            <i class="fa-solid fa-chevron-down"></i>
-          </span>
-        </div>
-        <!-- Collapsible Footer Links -->
-        <div class="footerLinks hidden container m-auto p-3">
-          <div class="flex flex-wrap justify-between gap-5 py-5">
-            <!-- Footer Section: About Authority -->
-            <div
-              class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
-            >
-              <h2
-                class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
-              >
-                عن الهيئة
-                <span class="text-3xl md:hidden">+</span>
-              </h2>
-              <div class="sectionContent hidden md:block">
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >اتصل بنا</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >روابط مفيدة</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >الهيكل التنظيمي</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >وظائف الهيئة</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >مجلة المسار</a
-                >
-              </div>
-            </div>
-            <!-- Footer Section: Public Transport -->
-            <div
-              class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
-            >
-              <h2
-                class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
-              >
-                المواصلات العامة
-                <span class="text-3xl md:hidden">+</span>
-              </h2>
-              <div class="sectionContent hidden md:block">
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >بطاقات نول</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >باص دبي</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >ترام دبي</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >تاكسي دبي</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >التاكسي المائي</a
-                >
-              </div>
-            </div>
-            <!-- Footer Section: Drivers & Vehicle Owners -->
-            <div
-              class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
-            >
-              <h2
-                class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
-              >
-                السائقين ومالكي المركبات
-                <span class="text-3xl md:hidden">+</span>
-              </h2>
-              <div class="sectionContent hidden md:block">
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >الاستعلام ودفع المخالفات</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >بطاقات المواقف الموسمية</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >موقف سيارات</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >سالك</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >خدمات المواقف</a
-                >
-              </div>
-            </div>
-            <!-- Footer Section: Business Sector -->
-            <div
-              class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
-            >
-              <h2
-                class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
-              >
-                قطاع الأعمال
-                <span class="text-3xl md:hidden">+</span>
-              </h2>
-              <div class="sectionContent hidden md:block">
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >إعلان العطاءات</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >شهادة عدم الممانعة</a
-                >
-                <a href="/" class="hover:underline duration-200 block my-3"
-                  >تأهيل الموردين</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Social Links & Logos -->
-      <div class="container m-auto p-3">
-        <div
-          class="flex flex-col lg:flex-row items-center justify-between py-5 gap-5"
-        >
-          <div class="flex items-center gap-7 text-3xl text-gray-500">
-            <a href="#" class="hover:text-redClr duration-300"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a href="#" class="hover:text-redClr duration-300"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#" class="hover:text-redClr duration-300"
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
-            <a href="#" class="hover:text-redClr duration-300"
-              ><i class="fa-brands fa-youtube"></i
-            ></a>
-            <a href="#" class="hover:text-redClr duration-300"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-          </div>
-          <div class="flex items-center justify-center flex-wrap gap-5">
-            <img
-              class="w-52"
-              src="https://u.ae/assets/images/government-ae-logo-arabic.png"
-              alt=""
-            />
-            <img
-              class="w-52"
-              src="https://www.digitaldubai.ae/ResourcePackages/Theme/assets/dist/images/logo-white.png"
-              alt=""
-            />
-            <img
-              class="w-52"
-              src="https://www.dubaipulse.gov.ae/images/logo-2.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 py-7">
+      <section class="myContainer mySecPadding">
+        <div class="myTitle">
+          <h2>تطبيقات الهيئة</h2>
           <p>
-            حقوق النشر © 2020 هيئة الطرق والمواصلات ، جميع الحقوق محفوظة. تتم
-            صيانة هذا الموقع من قبل هيئة الطرق والمواصلات.
-          </p>
-          <p>
-            من الأفضل مشاهدة الموقع باستخدام IE9 والإصدارات الأحدث ، Mozilla
-            Firefox ، Safari و Chrome. آخر تعديل للصفحة: 03/22/2025
+            تسعى الهيئة لإسعادك وتسعى لدعم مدينة دبي للتحول الى مدينة ذكية وتعمل
+            على تعزيز أهدافها الاستراتيجية ولتحقيق كل هذا توفر الهيئة خاصية
+            سهولة الوصول لخدماتها عبر التطبيقات الذكية المصممة لتلبية احتياجاتك
           </p>
         </div>
-      </div>
-    </footer>
 
-    <a href="#" class="fixed left-0 bottom-0 bg-redClr p-3 text-white text-4xl"
-      ><i class="fa-solid fa-face-smile-beam"></i
-    ></a>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-3 gap-3 lg:gap-0"
+        >
+          <div class="flex flex-row lg:flex-col items-center gap-3 p-3 border">
+            <img
+              class="w-20 lg:w-40"
+              src="https://www.rta.ae/wps/wcm/connect/rta/7491d5b5-ee47-419a-b733-9d902c9d639b/rta-dubai-app.jpg?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_N004G041LOBR60AUHP2NT32000-7491d5b5-ee47-419a-b733-9d902c9d639b-oKeYvqW"
+            />
+            <p class="font-bold lg:text-xl">هيئة الطرق والمواصلات</p>
+          </div>
+
+          <div class="flex flex-row lg:flex-col items-center gap-3 p-3 border">
+            <img
+              class="w-20 lg:w-40"
+              src="https://www.rta.ae/wps/wcm/connect/rta/1aef5f2f-01c7-4f8f-b151-b2dc3dd882b8/dtc-app-logo.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_N004G041LOBR60AUHP2NT32000-1aef5f2f-01c7-4f8f-b151-b2dc3dd882b8-oKfkVfV"
+            />
+            <p class="font-bold lg:text-xl">تطبيق DTC APP</p>
+          </div>
+
+          <div class="flex flex-row lg:flex-col items-center gap-3 p-3 border">
+            <img
+              class="w-20 lg:w-40"
+              src="https://www.rta.ae/wps/wcm/connect/rta/3c77ce37-d96b-4f99-8df3-8a719841e5ab/Shail.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_N004G041LOBR60AUHP2NT32000-3c77ce37-d96b-4f99-8df3-8a719841e5ab-oWJfNF0"
+            />
+            <p class="font-bold lg:text-xl">سهيل</p>
+          </div>
+        </div>
+
+        <button class="flex items-center cursor-pointer my-3">
+          <span class="bg-blueClr text-white p-3"
+            ><i class="fa-solid fa-chevron-left"></i
+          ></span>
+          <span
+            class="p-3 text-blueClr font-bold hover:text-white hover:bg-blueClr duration-300"
+            >عرض الكل</span
+          >
+        </button>
+      </section>
+
+      <section class="myContainer mySecPadding">
+        <div class="myTitle">
+          <h2>شارك معنا</h2>
+          <p>نحن هنا من أجلك، فلا تتردد وتواصل معنا عبر القنوات التالية:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4">
+          <div
+            class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
+          >
+            <span class="text-4xl text-blueClr mb-3 mx-auto"
+              ><i class="fa-solid fa-headset"></i
+            ></span>
+            <h4 class="font-bold text-md">تحدّث مع محبوب</h4>
+            <p class="text-xs lg:text-sm">تحدًث وقدًم على خدماتنا مع محبوب</p>
+          </div>
+          <div
+            class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
+          >
+            <span class="text-4xl text-blueClr mb-3 mx-auto"
+              ><i class="fa-solid fa-envelope"></i
+            ></span>
+            <h4 class="font-bold text-md">راسلنا</h4>
+            <p class="text-xs lg:text-sm">راسلنا عبر البريد الإلكتروني</p>
+          </div>
+          <div
+            class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
+          >
+            <span class="text-4xl text-blueClr mb-3 mx-auto"
+              ><i class="fa-solid fa-hands-holding-circle"></i
+            ></span>
+            <h4 class="font-bold text-md">مجلس محمد بن راشد الذكي</h4>
+            <p class="text-xs lg:text-sm">ساهم في بناء مستقبل دبي</p>
+          </div>
+          <div
+            class="flex flex-col text-center p-6 rounded-xl shadow-md hover:shadow-2xl duration-300 cursor-pointer"
+          >
+            <span class="text-4xl text-blueClr mb-3 mx-auto"
+              ><i class="fa-solid fa-comments"></i
+            ></span>
+            <h4 class="font-bold text-md">الآراء والأفكار</h4>
+            <p class="text-xs lg:text-sm">ارسل أفكارك أو شكواك أو استفسارك</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <!-- Toggle -->
+        <div class="bg-grayClr3 text-white">
+          <button
+            class="discoverToggle flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
+          >
+            <p>اكتشف المزيد</p>
+            <span id="arrowIcon" class="duration-200">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </button>
+          <!-- footer links -->
+          <div class="myContainer mySecPadding footerLinks hidden">
+            <div class="flex flex-wrap justify-between gap-5">
+              <div
+                class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
+              >
+                <h2
+                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                >
+                  عن الهيئة
+                  <span class="text-3xl md:hidden">+</span>
+                </h2>
+                <div class="sectionContent hidden md:block">
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >اتصل بنا</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >روابط مفيدة</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >الهيكل التنظيمي</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >وظائف الهيئة</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >مجلة المسار</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
+              >
+                <h2
+                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                >
+                  المواصلات العامة
+                  <span class="text-3xl md:hidden">+</span>
+                </h2>
+                <div class="sectionContent hidden md:block">
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >بطاقات نول</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >باص دبي</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >ترام دبي</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >تاكسي دبي</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >التاكسي المائي</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
+              >
+                <h2
+                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                >
+                  السائقين ومالكي المركبات
+                  <span class="text-3xl md:hidden">+</span>
+                </h2>
+                <div class="sectionContent hidden md:block">
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >الاستعلام ودفع المخالفات</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >بطاقات المواقف الموسمية</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >موقف سيارات</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >سالك</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >خدمات المواقف</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
+              >
+                <h2
+                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                >
+                  قطاع الأعمال
+                  <span class="text-3xl md:hidden">+</span>
+                </h2>
+                <div class="sectionContent hidden md:block">
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >إعلان العطاءات</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >شهادة عدم الممانعة</a
+                  >
+                  <a href="/" class="hover:underline duration-200 block my-3"
+                    >تأهيل الموردين</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links & Logos -->
+        <div class="myContainer mySecPadding">
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between py-5 gap-5"
+          >
+            <div class="flex items-center gap-7 text-3xl text-grayClr3">
+              <a href="#" class="hover:text-redClr duration-300"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" class="hover:text-redClr duration-300"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="hover:text-redClr duration-300"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="hover:text-redClr duration-300"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+              <a href="#" class="hover:text-redClr duration-300"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+            <div class="flex items-center justify-center flex-wrap gap-5">
+              <img
+                class="w-52"
+                src="https://u.ae/assets/images/government-ae-logo-arabic.png"
+                alt=""
+              />
+              <img
+                class="w-52"
+                src="https://www.digitaldubai.ae/ResourcePackages/Theme/assets/dist/images/logo-white.png"
+                alt=""
+              />
+              <img
+                class="w-52"
+                src="https://www.dubaipulse.gov.ae/images/logo-2.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 py-7">
+            <p>
+              حقوق النشر © 2020 هيئة الطرق والمواصلات ، جميع الحقوق محفوظة. تتم
+              صيانة هذا الموقع من قبل هيئة الطرق والمواصلات.
+            </p>
+            <p>
+              من الأفضل مشاهدة الموقع باستخدام IE9 والإصدارات الأحدث ، Mozilla
+              Firefox ، Safari و Chrome. آخر تعديل للصفحة: 03/22/2025
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- help icon -->
+      <a
+        href="#"
+        class="fixed left-0 bottom-0 bg-redClr p-3 text-white text-4xl"
+        ><i class="fa-solid fa-face-smile-beam"></i
+      ></a>
+    </main>
+
     <!-- script -->
     <script>
+      // toggle nav
       const aboutNavBtn = document.querySelector(".aboutNavBtn");
       const aboutNavIcon = aboutNavBtn.querySelector("i");
       const aboutNav = document.querySelector(".aboutNav");
@@ -582,6 +597,7 @@
         }
       });
 
+      // toggle fotter
       const discoverToggle = document.querySelector(".discoverToggle");
       const footerLinks = document.querySelector(".footerLinks");
       const arrowIcon = document.querySelector("#arrowIcon");
@@ -594,10 +610,8 @@
       const sectionTitles = document.querySelectorAll(".footerSectionTitle");
       sectionTitles.forEach((title) => {
         title.addEventListener("click", () => {
-          if (window.innerWidth < 768) {
-            const sectionContent = title.nextElementSibling;
-            sectionContent.classList.toggle("hidden");
-          }
+          const sectionContent = title.nextElementSibling;
+          sectionContent.classList.toggle("hidden");
         });
       });
     </script>
