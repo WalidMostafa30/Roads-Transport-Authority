@@ -43,12 +43,12 @@
       }
     </style>
     <!-- css link -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../index.css" />
   </head>
 
   <body>
-    <main>
+    <main class="bg-grayClr1">
       <!-- Header -->
       <header class="myContainer">
         <!-- top header -->
@@ -218,14 +218,14 @@
               الصفحة الرئيسية
             </a>
             <a
-              href="pages/sideBarPages/about.html"
+              href="/pages/sideBarPages/about.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"><i class="fa-solid fa-globe"></i></span>
               عن الهيئة
             </a>
             <a
-              href="pages/sideBarPages/mediaCenter.html"
+              href="/pages/sideBarPages/mediaCenter.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl">
@@ -234,7 +234,7 @@
               المركز الإعلامي
             </a>
             <a
-              href="pages/sideBarPages/openData.html"
+              href="/pages/sideBarPages/openData.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"
@@ -243,7 +243,7 @@
               البيانات المفتوحة
             </a>
             <a
-              href="pages/sideBarPages/services.html"
+              href="/pages/sideBarPages/services.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"
@@ -252,7 +252,7 @@
               خدماتنا
             </a>
             <a
-              href="pages/sideBarPages/contactUs.html"
+              href="/pages/sideBarPages/contactUs.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"
@@ -268,6 +268,7 @@
         <!-- main nav titles -->
         <nav class="homeNav my-3">
           <a href="/">الصفحة الرئيسية</a>
+          <a href="/">البحث عن المخالفات</a>
           <a href="/">الاستعلام ودفع المخالفات</a>
         </nav>
 
@@ -277,206 +278,181 @@
         </div>
       </div>
 
-      <!-- Home Section -->
+      <div class="myContainer py-5 flex items-center flex-wrap gap-3">
+        <a
+          href="#"
+          class="text-blueClr font-semibold text-sm lg:text-base flex items-center gap-2 pb-2 border-b-2"
+          >المخالفات القابلة للدفع
+          <span
+            class="w-8 h-8 flex items-center justify-center bg-blueClr text-white rounded-full"
+            >1</span
+          >
+        </a>
+        <a
+          href="#"
+          class="text-blueClr font-semibold text-sm lg:text-base flex items-center gap-2"
+        >
+          المخالفات الغير قابلة للدفع
+        </a>
+        <a
+          href="#"
+          class="text-blueClr font-semibold text-sm lg:text-base flex items-center gap-2"
+        >
+          النقاط السوداء القابلة للدفع
+        </a>
+      </div>
+
+      <!-- payment Section -->
       <section class="myContainer mySecPadding">
-        <div class="p-6 lg:p-10 mySecPadding bg-grayClr1">
-          <div class="p-6 lg:p-10 bg-white">
-            <!-- Swiper Links -->
-            <div class="mySwiper swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div
-                    class="swiperLink flex items-center gap-2 pb-2 cursor-pointer text-md text-grayClr3 font-bold border-b-4 border-transparent active"
-                  >
-                    <span class="text-4xl"
-                      ><i class="fa-solid fa-rectangle-list"></i
-                    ></span>
-                    تفاصيل اللوحة
+        <div class="bg-white shadow-lg rounded-lg p-4 lg:p-8">
+          <div class="myTitle">
+            <h2>المخالفات القابلة للدفع</h2>
+            <p>المخالفات التي يمكن تسويتها دون الرجوع إلى جهة المصدر.</p>
+          </div>
+
+          <div class="flex flex-wrap gap-3 mb-5">
+            <a
+              href="payment2.html"
+              class="w-full lg:w-fit text-white bg-blueClr hover:bg-redClr p-3"
+            >
+              دفع جميع المخالفات 200 درهم
+            </a>
+            <a
+              href="#"
+              class="w-full lg:w-fit text-white bg-teal-500 hover:bg-redClr p-3"
+            >
+              المجموع النهائي المحدد: درهم 200 لـ 1 مخالفات
+            </a>
+            <a
+              href="#"
+              class="w-full lg:w-fit text-blueClr hover:bg-redClr hover:text-white border p-3"
+            >
+              بحث جديد
+            </a>
+          </div>
+
+          <div class="grid grid-cols-3 border bg-grayClr1">
+            <div class="col-span-3 2xl:col-span-2">
+              <div class="flex items-center justify-between p-3">
+                <input type="checkbox" class="w-7 h-7 accent-teal-500" />
+
+                <div class="flex flex-col lg:flex-row gap-3">
+                  <div class="font-bold">NISSAN ALTIMA<br />أبيض 2023</div>
+
+                  <div>
+                    <p class="text-grayClr2">تاريخ ووقت إصدار المخالفة</p>
+                    <h4 class="font-bold">
+                      04 ديسمبر 2024 <br />
+                      11:54 ص
+                    </h4>
+                  </div>
+
+                  <div>
+                    <p class="text-grayClr2">المبلغ الإجمالي</p>
+                    <h4 class="font-bold">200 درهم</h4>
+                  </div>
+
+                  <div>
+                    <p class="text-grayClr2">المصدر</p>
+                    <h4 class="font-bold">دائرة النقل أبوظبي</h4>
+                  </div>
+
+                  <div>
+                    <p class="text-grayClr2">النقاط السوداء</p>
+                    <h4 class="font-bold">_</h4>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div
-                    class="swiperLink flex items-center gap-2 pb-2 cursor-pointer text-md text-grayClr3 font-bold border-b-4 border-transparent"
+
+                <span> <i class="fa-solid fa-chevron-left"></i> </span>
+              </div>
+
+              <!-- Pagination -->
+              <div
+                class="flex flex-col lg:flex-row gap-3 items-center justify-between bg-white p-3"
+              >
+                <div class="flex gap-2">
+                  <button
+                    class="bg-grayClr3 text-white py-1 px-4 rounded hover:bg-gray-400"
                   >
-                    <span class="text-4xl"
-                      ><i class="fa-solid fa-address-card"></i
-                    ></span>
-                    رخصة القيادة
-                  </div>
+                    الأول
+                  </button>
+                  <button
+                    class="bg-grayClr3 text-white py-1 px-4 rounded hover:bg-gray-400"
+                  >
+                    السابق
+                  </button>
                 </div>
-                <div class="swiper-slide">
-                  <div
-                    class="swiperLink flex items-center gap-2 pb-2 cursor-pointer text-md text-grayClr3 font-bold border-b-4 border-transparent"
+
+                <div class="bg-blueClr text-white py-1 px-4 rounded">1</div>
+
+                <div class="flex gap-2">
+                  <button
+                    class="bg-grayClr3 text-white py-1 px-4 rounded hover:bg-gray-400"
                   >
-                    <span class="text-4xl"
-                      ><i class="fa-solid fa-user-pen"></i
-                    ></span>
-                    رقم المخالفة
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div
-                    class="swiperLink flex items-center gap-2 pb-2 cursor-pointer text-md text-grayClr3 font-bold border-b-4 border-transparent"
+                    التالي
+                  </button>
+                  <button
+                    class="bg-grayClr3 text-white py-1 px-4 rounded hover:bg-gray-400"
                   >
-                    <span class="text-4xl"
-                      ><i class="fa-solid fa-rectangle-list"></i
-                    ></span>
-                    رقم ملف المرور
-                  </div>
+                    الأخير
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Search Form -->
-            <form>
+            <div class="col-span-3 2xl:col-span-1 min-h-100 bg-white">
               <div
-                class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7 mt-8"
+                class="bg-white p-6 w-full shadow rounded border border-gray-300"
               >
-                <div>
-                  <label
-                    for="exampleSelect"
-                    class="block mb-2 text-sm font-bold text-gray-700"
-                  >
-                    مصدر اللوحة <span class="text-redClr">*</span>
-                  </label>
-                  <select
-                    id="exampleSelect"
-                    class="block w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option selected disabled>اختر...</option>
-                    <option value="دبي">دبي</option>
-                    <option value="ابو ظبي">ابو ظبي</option>
-                    <option value="الفجيرة">الفجيرة</option>
-                    <option value="رأس الخيمة">رأس الخيمة</option>
-                    <option value="ام القيوين">ام القيوين</option>
-                    <option value="الشارقة">الشارقة</option>
-                    <option value="عجمان">عجمان</option>
-                    <option value="الكويت">الكويت</option>
-                    <option value="قطر">قطر</option>
-                    <option value="مملكة البحرين">مملكة البحرين</option>
-                    <option value="عمان">عمان</option>
-                    <option value="السعوديه">السعوديه</option>
-                    <option value="مصر">مصر</option>
-                    <option value="العراق">العراق</option>
-                    <option value="ليبيا">ليبيا</option>
-                  </select>
+                <button
+                  class="w-full bg-red-600 text-white py-3 text-center text-lg font-semibold rounded"
+                >
+                  ادفع الآن
+                </button>
+
+                <div
+                  class="border mt-4 p-4 text-center text-xl font-bold tracking-widest"
+                >
+                  <div class="text-sm">DUBAI</div>
+                  <div>K 12211</div>
                 </div>
-                <div>
-                  <label
-                    for="exampleSelect"
-                    class="block mb-2 text-sm font-bold text-gray-700"
-                  >
-                    صنف اللوحة <span class="text-redClr">*</span>
-                  </label>
-                  <select
-                    id="exampleSelect"
-                    class="block w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option selected disabled>اختر...</option>
-                    <option value="خصوصي">خصوصي</option>
-                    <option value="دراجة نارية">دراجة نارية</option>
-                    <option value="شرطة دبي">شرطة دبي</option>
-                    <option value="تعليم">تعليم</option>
-                    <option value="اجرة">اجرة</option>
-                    <option value="نقل عام">نقل عام</option>
-                    <option value="تصدير">تصدير</option>
-                    <option value="هيئة قنصلية">هيئة قنصلية</option>
-                    <option value="هيئة سياسية">هيئة سياسية</option>
-                    <option value="تشريفات">تشريفات</option>
-                    <option value="حكومة">حكومة</option>
-                    <option value="نقل خاص">نقل خاص</option>
-                    <option value="نقل البيانات">نقل البيانات</option>
-                    <option value="مقطورة">مقطورة</option>
-                    <option value="علم دبي">علم دبي</option>
-                    <option value="EXPO 1">EXPO 1</option>
-                    <option value="EXPO 2">EXPO 2</option>
-                    <option value="EXPO 3">EXPO 3</option>
-                    <option value="EXPO 4">EXPO 4</option>
-                    <option value="EXPO 5">EXPO 5</option>
-                    <option value="EXPO 6">EXPO 6</option>
-                    <option value="EXPO 7">EXPO 7</option>
-                    <option value="تحت التجربة">تحت التجربة</option>
-                    <option value="استيراد">استيراد</option>
-                    <option value="تجارية">تجارية</option>
-                    <option value="منظمة دولية">منظمة دولية</option>
-                    <option value="كلاسيك">كلاسيك</option>
-                    <option value="دراجة نارية ترفيهية">
-                      دراجة نارية ترفيهية
-                    </option>
-                  </select>
-                </div>
-                <div>
-                  <label
-                    for="exampleSelect"
-                    class="block mb-2 text-sm font-bold text-gray-700"
-                  >
-                    رمز اللوحة <span class="text-redClr">*</span>
-                  </label>
-                  <select
-                    id="exampleSelect"
-                    class="block w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option selected disabled>اختر...</option>
-                    <option value="A">A</option>
-                    <option value="AA">AA</option>
-                    <option value="B">B</option>
-                    <option value="BB">BB</option>
-                    <option value="C">C</option>
-                    <option value="CC">CC</option>
-                    <option value="D">D</option>
-                    <option value="DD">DD</option>
-                    <option value="E">E</option>
-                    <option value="EE">EE</option>
-                    <option value="F">F</option>
-                    <option value="G">G</option>
-                    <option value="H">H</option>
-                    <option value="HH">HH</option>
-                    <option value="I">I</option>
-                    <option value="J">J</option>
-                    <option value="K">K</option>
-                    <option value="L">L</option>
-                    <option value="M">M</option>
-                    <option value="N">N</option>
-                    <option value="NN">NN</option>
-                    <option value="O">O</option>
-                    <option value="P">P</option>
-                    <option value="Q">Q</option>
-                    <option value="R">R</option>
-                    <option value="S">S</option>
-                    <option value="T">T</option>
-                    <option value="U">U</option>
-                    <option value="V">V</option>
-                    <option value="W">W</option>
-                    <option value="X">X</option>
-                    <option value="Y">Y</option>
-                    <option value="Z">Z</option>
-                    <option value="ابيض">ابيض</option>
-                  </select>
-                </div>
-                <div>
-                  <label
-                    for="number1"
-                    class="block mb-2 text-sm font-bold text-gray-700"
-                  >
-                    رقم اللوحة <span class="text-redClr">*</span>
-                  </label>
-                  <input
-                    type="number"
-                    id="number1"
-                    name="number1"
-                    placeholder="مثال 12345"
-                    class="block w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  />
+
+                <div class="mt-4 space-y-2 text-right text-sm">
+                  <p><span class="font-semibold">NISSAN ALTIMA, 2023</span></p>
+                  <p>أبيض</p>
+
+                  <p>
+                    <span class="text-gray-500"
+                      >تاريخ ووقت إصدار المخالفة:</span
+                    >
+                    04 ديسمبر 2024، 11:54 ص
+                  </p>
+                  <p><span class="text-gray-500">الموقع:</span> 0</p>
+                  <p>
+                    <span class="text-gray-500">المصدر:</span> دائرة النقل
+                    أبوظبي
+                  </p>
+                  <p>
+                    <span class="text-gray-500">المبلغ الإجمالي:</span> 200 درهم
+                  </p>
+                  <p>
+                    <span class="text-gray-500"
+                      >النقاط السوداء القابلة للدفع:</span
+                    >
+                    -
+                  </p>
+                  <p><span class="text-gray-500">إبراز الرخصة:</span> لا</p>
+                  <p>
+                    <span class="text-gray-500">رقم المخالفة:</span> 1526142655
+                  </p>
+                  <p><span class="text-gray-500">التفاصيل:</span> غير معروف</p>
+                  <p class="text-gray-700 mt-2">
+                    يرجى الاتصال بدائرة النقل أبوظبي للحصول على تفاصيل حول
+                    التظلم على المخالفة.
+                  </p>
                 </div>
               </div>
-
-              <a
-                href="pages/paymentPages/payment1.html"
-                class="block text-center mt-5 w-full sm:w-32 py-3 text-xl bg-blueClr text-white hover:bg-redClr"
-              >
-                بحث
-              </a>
-            </form>
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Dubai Pay</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind custom color -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-skyClr: #f2f5f8;
+        --color-skyClr2: #b3d3eb;
+        --color-skyClr3: #005ba8;
+        --color-textClr: #50718d;
+      }
+      @layer components {
+        .myContainer {
+          @apply container mx-auto px-3;
+        }
+        .myCard {
+          @apply p-3 mb-5 bg-white shadow-md shadow-skyClr2 rounded-lg;
+        }
+      }
+    </style>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="bg-skyClr">
+    <main class="myContainer">
+      <header class="myCard flex items-center justify-between">
+        <img
+          class="w-20 lg:w-40"
+          src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/dubai-pay-logo.png"
+          alt=""
+        />
+        <img
+          class="w-20 lg:w-40"
+          src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/dubai-digital-authority-logo.png"
+          alt=""
+        />
+      </header>
+
+      <section>
+        <h2 class="text-textClr font-bold mb-5">
+          Roads & Transport Authority 5 . #LPG-3177156 <span>Details</span>
+        </h2>
+
+        <div class="myCard">
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>Service</p>
+            <p>SDDI Online Payment</p>
+          </div>
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>SP Transaction No</p>
+            <p>LPG-3177156</p>
+          </div>
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>Amount</p>
+            <p>200.00 AED</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="flex items-center gap-2 mb-5">
+          <h2 class="text-textClr font-bold">Enter Card Details</h2>
+          <div class="flex items-center gap-1">
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/master-card.png"
+              alt=""
+              class="w-6"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/visa-dark.png"
+              alt=""
+              class="w-6"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/american-express-dark.png"
+              alt=""
+              class="w-6"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/jcb-card.png"
+              alt=""
+              class="w-6"
+            />
+          </div>
+        </div>
+
+        <div class="myCard">
+          <form>
+            <div class="flex flex-wrap items-center gap-2 py-2">
+              <label class="text-gray-600">Credit Card Number</label>
+              <input
+                class="focus:shadow-md focus:shadow-skyClr2 outline-0 border border-gray-200 rounded px-2 py-1"
+                type="number"
+                placeholder="Card Number"
+              />
+            </div>
+            <div class="flex flex-wrap items-center gap-2 py-2">
+              <label class="text-gray-600">Expiry Date</label>
+              <div>
+                <input
+                  class="focus:shadow-md focus:shadow-skyClr2 outline-0 border border-gray-200 rounded px-2 py-1 w-16"
+                  type="number"
+                  placeholder="MM"
+                />
+                /
+                <input
+                  class="focus:shadow-md focus:shadow-skyClr2 outline-0 border border-gray-200 rounded px-2 py-1 w-16"
+                  type="number"
+                  placeholder="YY"
+                />
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 py-2">
+              <label class="text-gray-600">CVV Number</label>
+              <input
+                class="focus:shadow-md focus:shadow-skyClr2 outline-0 border border-gray-200 rounded px-2 py-1 w-16"
+                type="number"
+                placeholder="CVV"
+              />
+            </div>
+          </form>
+
+          <div class="flex items-center gap-1 mt-3">
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/master_secure.png"
+              alt=""
+              class="w-12 lg:w-24"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/visa_verified.png"
+              alt=""
+              class="w-12 lg:w-24"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/amex_secure.png"
+              alt=""
+              class="w-12 lg:w-24"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/jcb_secure.png"
+              alt=""
+              class="w-12 lg:w-24"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/pci_logo.png"
+              alt=""
+              class="w-12 lg:w-24"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-textClr font-bold mb-5">Donation</h2>
+
+        <div class="myCard">
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <div class="w-[70%]">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" />
+                <p class="text-slate-700 font-bold w-full">
+                  Donate for charity "Dirham Al Amal"
+                  <a href="#" class="text-skyClr3 underline">Learn more</a>
+                </p>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2 py-2">
+                <label>Donation Amount (AED)</label>
+                <input
+                  class="focus:shadow-md focus:shadow-skyClr2 outline-0 border border-gray-200 rounded px-2 py-1 w-16"
+                  type="number"
+                  value="10"
+                />
+              </div>
+            </div>
+
+            <img
+              src="https://epayment.dubai.ae/ePayHub/CardProcessor/theme/images/donation.png"
+              class="w-12 lg:w-18"
+            />
+          </div>
+
+          <p class="mt-3">
+            This initiative is launched by Dubai Department of Finance. IACAD
+            License No.: PRHCE-003857601
+          </p>
+        </div>
+      </section>
+
+      <div class="mb-5">
+        <h2 class="text-slate-700 font-bold">Total Amount: 200.00 AED</h2>
+        <div class="flex items-center gap-3 mt-3">
+          <button
+            class="min-w-26 py-1 rounded-full border border-transparent bg-gray-200 hover:bg-gray-300 hover:border-gray-300"
+          >
+            Cancel
+          </button>
+          <a
+            href="paymentLoader.html"
+            class="min-w-26 py-1 rounded-full border border-skyClr3 bg-skyClr3 text-white text-center hover:bg-white hover:text-skyClr3"
+          >
+            pay
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        <div class="flex flex-wrap items-center justify-between gap-1 py-3">
+          <p>
+            For more inquiries please call
+            <a href="#" class="text-skyClr3 underline">600 560 000</a>
+          </p>
+          <p>Copyright © 2025. All rights reserved</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

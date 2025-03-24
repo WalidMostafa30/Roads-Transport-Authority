@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Dubai Pay</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind custom color -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-skyClr: #f2f5f8;
+        --color-skyClr2: #b3d3eb;
+        --color-skyClr3: #005ba8;
+        --color-textClr: #50718d;
+      }
+      @layer components {
+        .myContainer {
+          @apply container mx-auto px-3;
+        }
+        .myCard {
+          @apply p-3 mb-5 bg-white shadow-md shadow-skyClr2 rounded-lg;
+        }
+      }
+    </style>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="bg-skyClr">
+    <main class="myContainer">
+      <header class="myCard flex items-center justify-between">
+        <img
+          class="w-20 lg:w-40"
+          src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/dubai-pay-logo.png"
+          alt=""
+        />
+        <img
+          class="w-20 lg:w-40"
+          src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/dubai-digital-authority-logo.png"
+          alt=""
+        />
+      </header>
+
+      <section>
+        <h2 class="text-textClr font-bold mb-5">
+          Roads & Transport Authority 5 . #LPG-3177156 <span>Details</span>
+        </h2>
+
+        <div class="myCard">
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>Service</p>
+            <p>SDDI Online Payment</p>
+          </div>
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>SP Transaction No</p>
+            <p>LPG-3177156</p>
+          </div>
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>Amount</p>
+            <p>200.00 AED</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-textClr font-bold mb-5">Payment Method</h2>
+
+        <div class="myCard">
+          <label class="flex items-center gap-3 py-3">
+            <input
+              type="radio"
+              name="payment"
+              class="accent-skyclr2 w-5 h-5 cursor-pointer"
+              checked
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/imgProviders_08.png"
+              class="w-10"
+            />
+            <span class="text-gray-700 font-medium">Credit Card</span>
+          </label>
+
+          <label class="flex items-center gap-3 py-3">
+            <input
+              type="radio"
+              name="payment"
+              class="accent-skyclr2 w-5 h-5 cursor-pointer"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/imgProviders_05.png"
+              class="w-10"
+            />
+            <span class="text-gray-700 font-medium">Net Banking</span>
+          </label>
+
+          <label class="flex items-center gap-3 py-3">
+            <input
+              type="radio"
+              name="payment"
+              class="accent-skyclr2 w-5 h-5 cursor-pointer"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/googlepayProvider.png"
+              class="w-10"
+            />
+            <span class="text-gray-700 font-medium">Google Pay</span>
+          </label>
+
+          <label class="flex items-center gap-3 py-3">
+            <input
+              type="radio"
+              name="payment"
+              class="accent-skyclr2 w-5 h-5 cursor-pointer"
+            />
+            <img
+              src="https://epayment.dubai.ae/ePayHub/Authentication/theme/images/tabby.svg"
+              class="w-10"
+            />
+            <span class="text-gray-700 font-medium">Pay Later with Tabby</span>
+            <span class="text-xs text-gray-500">(Service fees apply)</span>
+          </label>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-textClr font-bold mb-5">Contact Info</h2>
+
+        <div class="myCard">
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>Email</p>
+            <p>support@isoft.ae</p>
+          </div>
+          <div
+            class="flex items-center justify-between py-2 text-gray-600 border-b border-gray-200"
+          >
+            <p>Mobile</p>
+            <p>971501250076</p>
+          </div>
+          <a href="#" class="text-skyClr3 underline">Add another account</a>
+        </div>
+      </section>
+
+      <div class="mb-5">
+        <h2 class="text-slate-700 font-bold">Total Amount: 200.00 AED</h2>
+        <div class="flex items-center gap-3 mt-3">
+          <button
+            class="min-w-26 py-1 rounded-full border border-transparent bg-gray-200 hover:bg-gray-300 hover:border-gray-300"
+          >
+            Cancel
+          </button>
+          <a
+            href="payment4.html"
+            class="min-w-26 py-1 rounded-full border border-skyClr3 bg-skyClr3 text-white text-center hover:bg-white hover:text-skyClr3"
+          >
+            pay
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        <p class="text-center font-bold text-gray-600">
+          By tapping on "Pay" you are agreeing with our
+          <a href="#" class="text-skyClr3 underline">Terms & Conditions</a>
+        </p>
+        <div class="flex flex-wrap items-center justify-between gap-1 py-3">
+          <p>
+            For more inquiries please call
+            <a href="#" class="text-skyClr3 underline">600 560 000</a>
+          </p>
+          <p>Copyright © 2025. All rights reserved</p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
