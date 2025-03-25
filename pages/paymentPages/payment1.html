@@ -17,11 +17,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind custom color -->
@@ -72,7 +67,7 @@
           <ul class="flex items-center gap-6">
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300 active"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300 active"
             >
               <span class="text-xl xl:text-2xl"
                 ><i class="fa-solid fa-house-chimney"></i
@@ -80,7 +75,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               السائقين ومالكي المركبات
               <span class="text-xl xl:text-2xl"
@@ -89,7 +84,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               المواصلات العامة
               <span class="text-xl xl:text-2xl"
@@ -98,7 +93,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               قطاع الأعمال
               <span class="text-xl xl:text-2xl"
@@ -107,7 +102,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               أصحاب الهمم
               <span class="text-xl xl:text-2xl"
@@ -310,31 +305,42 @@
             <p>المخالفات التي يمكن تسويتها دون الرجوع إلى جهة المصدر.</p>
           </div>
 
+          <!-- buttons -->
           <div class="flex flex-wrap gap-3 mb-5">
             <a
               href="payment2.html"
-              class="w-full lg:w-fit text-white bg-blueClr hover:bg-redClr p-3"
+              class="w-full lg:w-fit text-center text-white bg-blueClr hover:bg-redClr p-3"
             >
               دفع جميع المخالفات 200 درهم
             </a>
             <a
               href="#"
-              class="w-full lg:w-fit text-white bg-teal-500 hover:bg-redClr p-3"
+              class="hidden w-full lg:w-fit text-center text-white bg-teal-500 hover:bg-redClr p-3"
+              id="paymentBtn"
             >
               المجموع النهائي المحدد: درهم 200 لـ 1 مخالفات
             </a>
             <a
               href="#"
-              class="w-full lg:w-fit text-blueClr hover:bg-redClr hover:text-white border p-3"
+              class="w-full lg:w-fit text-center text-blueClr hover:bg-redClr hover:text-white border p-3"
             >
               بحث جديد
             </a>
           </div>
 
-          <div class="grid grid-cols-3 border bg-grayClr1">
-            <div class="col-span-3 2xl:col-span-2">
-              <div class="flex items-center justify-between p-3">
-                <input type="checkbox" class="w-7 h-7 accent-teal-500" />
+          <!-- payment section -->
+          <div class="grid grid-cols-3 border border-grayClr2 bg-grayClr1">
+            <!-- first side -->
+            <aside class="col-span-3 2xl:col-span-2">
+              <label
+                for="paymentCheck"
+                class="flex items-center justify-between p-3"
+              >
+                <input
+                  id="paymentCheck"
+                  type="checkbox"
+                  class="w-7 h-7 accent-teal-500"
+                />
 
                 <div class="flex flex-col lg:flex-row gap-3">
                   <div class="font-bold">NISSAN ALTIMA<br />أبيض 2023</div>
@@ -364,7 +370,7 @@
                 </div>
 
                 <span> <i class="fa-solid fa-chevron-left"></i> </span>
-              </div>
+              </label>
 
               <!-- Pagination -->
               <div
@@ -398,12 +404,25 @@
                   </button>
                 </div>
               </div>
-            </div>
-
-            <div class="col-span-3 2xl:col-span-1 min-h-100 bg-white">
+            </aside>
+            <!-- second side -->
+            <aside
+              class="col-span-3 2xl:col-span-1 min-h-100 bg-white border border-grayClr2 flex items-center justify-center"
+            >
+              <!-- iconCard -->
               <div
-                class="bg-white p-6 w-full shadow rounded border border-gray-300"
+                id="iconSec"
+                class="flex flex-col items-center gap-3 text-lg"
               >
+                <span
+                  class="bg-grayClr1 w-40 h-40 rounded-full flex justify-center items-center"
+                  ><img class="w-30" src="../../note-img.png" alt="note"
+                /></span>
+                <p>حدد مخالفه واحده لاظهار التفاصيل</p>
+              </div>
+
+              <!-- details Card -->
+              <div id="detailsSec" class="hidden bg-white p-6 w-full">
                 <button
                   class="w-full bg-red-600 text-white py-3 text-center text-lg font-semibold rounded"
                 >
@@ -452,12 +471,12 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </aside>
           </div>
         </div>
       </section>
 
-      <!-- Home Footer -->
+      <!-- section Footer -->
       <section class="bg-redClr text-white">
         <div class="myContainer flex flex-wrap justify-between gap-7">
           <div class="pt-5">
@@ -512,13 +531,14 @@
         <!-- Toggle -->
         <div class="bg-grayClr3 text-white">
           <button
-            class="discoverToggle flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
+            class="showFooterBtn flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
           >
             <p>اكتشف المزيد</p>
             <span id="arrowIcon" class="duration-200">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </button>
+
           <!-- footer links -->
           <div class="myContainer mySecPadding footerLinks hidden">
             <div class="flex flex-wrap justify-between gap-5">
@@ -526,7 +546,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   عن الهيئة
                   <span class="text-3xl md:hidden">+</span>
@@ -553,7 +573,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   المواصلات العامة
                   <span class="text-3xl md:hidden">+</span>
@@ -580,7 +600,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   السائقين ومالكي المركبات
                   <span class="text-3xl md:hidden">+</span>
@@ -607,7 +627,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   قطاع الأعمال
                   <span class="text-3xl md:hidden">+</span>
@@ -703,57 +723,19 @@
       </div>
     </div> -->
 
-    <!-- Swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- Script -->
+    <script src="../../main.js"></script>
     <script>
-      // toggle nav
-      const menuToggle = document.querySelector(".barsMenu");
-      const smallNav = document.querySelector(".smallNavLinks");
-      menuToggle.addEventListener("click", () => {
-        smallNav.classList.toggle("open");
-        menuToggle.classList.toggle("open");
-      });
-
-      // toggle footer
-      const discoverToggle = document.querySelector(".discoverToggle");
-      const footerLinks = document.querySelector(".footerLinks");
-      const arrowIcon = document.querySelector("#arrowIcon");
-      discoverToggle.addEventListener("click", () => {
-        footerLinks.classList.toggle("hidden");
-        arrowIcon.classList.toggle("rotate-180");
-      });
-
-      // toggle footer links
-      const sectionTitles = document.querySelectorAll(".footerSectionTitle");
-      sectionTitles.forEach((title) => {
-        title.addEventListener("click", () => {
-          const sectionContent = title.nextElementSibling;
-          sectionContent.classList.toggle("hidden");
-        });
-      });
-
-      // swiper breakpoints
-      const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        breakpoints: {
-          767: { slidesPerView: 2 },
-          1020: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        },
-      });
-
-      // active swiper link
-      const links = document.querySelectorAll(".swiperLink");
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          links.forEach((l) =>
-            l.classList.remove("active", "border-b-red-500")
-          );
-          link.classList.add("active", "border-b-red-500");
-        });
+      // handle payment check
+      const paymentCheck = document.querySelector("#paymentCheck");
+      const iconSec = document.querySelector("#iconSec");
+      const detailsSec = document.querySelector("#detailsSec");
+      const paymentBtn = document.querySelector("#paymentBtn");
+      paymentCheck.addEventListener("change", () => {
+        paymentCheck.parentElement.classList.toggle("bg-violet-100");
+        iconSec.classList.toggle("hidden");
+        detailsSec.classList.toggle("hidden");
+        paymentBtn.classList.toggle("hidden");
       });
     </script>
   </body>

@@ -72,7 +72,7 @@
           <ul class="flex items-center gap-6">
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300 active"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300 active"
             >
               <span class="text-xl xl:text-2xl"
                 ><i class="fa-solid fa-house-chimney"></i
@@ -80,7 +80,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               السائقين ومالكي المركبات
               <span class="text-xl xl:text-2xl"
@@ -89,7 +89,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               المواصلات العامة
               <span class="text-xl xl:text-2xl"
@@ -98,7 +98,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               قطاع الأعمال
               <span class="text-xl xl:text-2xl"
@@ -107,7 +107,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               أصحاب الهمم
               <span class="text-xl xl:text-2xl"
@@ -327,7 +327,7 @@
               </div>
             </div>
 
-            <!-- Search Form -->
+            <!-- Form -->
             <form>
               <div
                 class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-7 mt-8"
@@ -481,7 +481,7 @@
         </div>
       </section>
 
-      <!-- Home Footer -->
+      <!-- section Footer -->
       <section class="bg-redClr text-white">
         <div class="myContainer flex flex-wrap justify-between gap-7">
           <div class="pt-5">
@@ -536,13 +536,14 @@
         <!-- Toggle -->
         <div class="bg-grayClr3 text-white">
           <button
-            class="discoverToggle flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
+            class="showFooterBtn flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
           >
             <p>اكتشف المزيد</p>
             <span id="arrowIcon" class="duration-200">
               <i class="fa-solid fa-chevron-down"></i>
             </span>
           </button>
+
           <!-- footer links -->
           <div class="myContainer mySecPadding footerLinks hidden">
             <div class="flex flex-wrap justify-between gap-5">
@@ -550,7 +551,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   عن الهيئة
                   <span class="text-3xl md:hidden">+</span>
@@ -577,7 +578,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   المواصلات العامة
                   <span class="text-3xl md:hidden">+</span>
@@ -604,7 +605,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   السائقين ومالكي المركبات
                   <span class="text-3xl md:hidden">+</span>
@@ -631,7 +632,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   قطاع الأعمال
                   <span class="text-3xl md:hidden">+</span>
@@ -729,35 +730,9 @@
 
     <!-- Swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- Script -->
+    <script src="main.js"></script>
     <script>
-      // toggle nav
-      const menuToggle = document.querySelector(".barsMenu");
-      const smallNav = document.querySelector(".smallNavLinks");
-      menuToggle.addEventListener("click", () => {
-        smallNav.classList.toggle("open");
-        menuToggle.classList.toggle("open");
-      });
-
-      // toggle footer
-      const discoverToggle = document.querySelector(".discoverToggle");
-      const footerLinks = document.querySelector(".footerLinks");
-      const arrowIcon = document.querySelector("#arrowIcon");
-      discoverToggle.addEventListener("click", () => {
-        footerLinks.classList.toggle("hidden");
-        arrowIcon.classList.toggle("rotate-180");
-      });
-
-      // toggle footer links
-      const sectionTitles = document.querySelectorAll(".footerSectionTitle");
-      sectionTitles.forEach((title) => {
-        title.addEventListener("click", () => {
-          const sectionContent = title.nextElementSibling;
-          sectionContent.classList.toggle("hidden");
-        });
-      });
-
       // swiper breakpoints
       const swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,

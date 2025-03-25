@@ -17,11 +17,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
     <!-- Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind custom color -->
@@ -72,7 +67,7 @@
           <ul class="flex items-center gap-6">
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300 active"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300 active"
             >
               <span class="text-xl xl:text-2xl"
                 ><i class="fa-solid fa-house-chimney"></i
@@ -80,7 +75,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               السائقين ومالكي المركبات
               <span class="text-xl xl:text-2xl"
@@ -89,7 +84,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               المواصلات العامة
               <span class="text-xl xl:text-2xl"
@@ -98,7 +93,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               قطاع الأعمال
               <span class="text-xl xl:text-2xl"
@@ -107,7 +102,7 @@
             </a>
             <a
               href="#"
-              class="navMidLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
+              class="bottomHeaderLink flex items-center gap-2 py-4 hover:text-redClr duration-300"
             >
               أصحاب الهمم
               <span class="text-xl xl:text-2xl"
@@ -294,23 +289,60 @@
               <a href="#" class="text-teal-500">قيد التنفيذ</a>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-3">
+            <div class="grid lg:grid-cols-2 gap-3 my-5">
               <div>
-                <div
-                  class="flex justify-between items-center flex-wrap py-4 font-semibold"
+                <table
+                  class="w-full text-right border-separate border-spacing-y-3"
                 >
-                  <h2>الخدمة</h2>
-                  <p class="text-teal-600">
-                    1 مخالفات دائرة النقل أبوظبيعرض المزيد
-                  </p>
-                </div>
-
-                <div
-                  class="flex justify-between items-center flex-wrap py-4 font-semibold"
-                >
-                  <h2>المبلغ الإجمالي (درهم)</h2>
-                  <p class="text-teal-600">200</p>
-                </div>
+                  <thead class="text-gray-700 text-sm font-semibold border-b">
+                    <tr>
+                      <th class="pb-2">الخدمة</th>
+                      <th class="pb-2">المبلغ الإجمالي (درهم)</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-gray-900 text-base">
+                    <tr>
+                      <td>
+                        4 مخالفات شرطة دبي
+                        <a href="#" class="text-blueClr hover:underline"
+                          >عرض المزيد</a
+                        >
+                      </td>
+                      <td>2300</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        2 مخالفات شرطة الشارقة
+                        <a href="#" class="text-blueClr hover:underline"
+                          >عرض المزيد</a
+                        >
+                      </td>
+                      <td>780</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        1 مخالفات شرطة أبوظبي
+                        <a href="#" class="text-blueClr hover:underline"
+                          >عرض المزيد</a
+                        >
+                      </td>
+                      <td>195</td>
+                    </tr>
+                    <tr>
+                      <td>رسم معرفة وإنكار مخالفات</td>
+                      <td>100</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        1 مخالفات سالك
+                        <a href="#" class="text-blueClr hover:underline"
+                          >عرض المزيد</a
+                        >
+                      </td>
+                      <td>50</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
 
               <!-- Payment Box -->
@@ -335,7 +367,8 @@
                     >
                       رجوع
                     </button>
-                    <a href="payment3.html"
+                    <a
+                      href="payment3.html"
                       class="bg-blue-900 text-white py-2 flex-grow rounded"
                     >
                       ادفع الآن
@@ -344,11 +377,18 @@
                 </div>
               </div>
             </div>
+
+            <div
+              class="flex justify-between items-center border-t border-grayClr2 pt-4 font-semibold"
+            >
+              <h2 class="text-blueClr">التأكيد</h2>
+              <a href="#" class="text-teal-500">لم تبدأ</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Home Footer -->
+      <!-- section Footer -->
       <section class="bg-redClr text-white">
         <div class="myContainer flex flex-wrap justify-between gap-7">
           <div class="pt-5">
@@ -403,7 +443,7 @@
         <!-- Toggle -->
         <div class="bg-grayClr3 text-white">
           <button
-            class="discoverToggle flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
+            class="showFooterBtn flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
           >
             <p>اكتشف المزيد</p>
             <span id="arrowIcon" class="duration-200">
@@ -417,7 +457,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   عن الهيئة
                   <span class="text-3xl md:hidden">+</span>
@@ -444,7 +484,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   المواصلات العامة
                   <span class="text-3xl md:hidden">+</span>
@@ -471,7 +511,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   السائقين ومالكي المركبات
                   <span class="text-3xl md:hidden">+</span>
@@ -498,7 +538,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   قطاع الأعمال
                   <span class="text-3xl md:hidden">+</span>
@@ -594,58 +634,7 @@
       </div>
     </div> -->
 
-    <!-- Swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <!-- Script -->
-    <script>
-      // toggle nav
-      const menuToggle = document.querySelector(".barsMenu");
-      const smallNav = document.querySelector(".smallNavLinks");
-      menuToggle.addEventListener("click", () => {
-        smallNav.classList.toggle("open");
-        menuToggle.classList.toggle("open");
-      });
-
-      // toggle footer
-      const discoverToggle = document.querySelector(".discoverToggle");
-      const footerLinks = document.querySelector(".footerLinks");
-      const arrowIcon = document.querySelector("#arrowIcon");
-      discoverToggle.addEventListener("click", () => {
-        footerLinks.classList.toggle("hidden");
-        arrowIcon.classList.toggle("rotate-180");
-      });
-
-      // toggle footer links
-      const sectionTitles = document.querySelectorAll(".footerSectionTitle");
-      sectionTitles.forEach((title) => {
-        title.addEventListener("click", () => {
-          const sectionContent = title.nextElementSibling;
-          sectionContent.classList.toggle("hidden");
-        });
-      });
-
-      // swiper breakpoints
-      const swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        breakpoints: {
-          767: { slidesPerView: 2 },
-          1020: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        },
-      });
-
-      // active swiper link
-      const links = document.querySelectorAll(".swiperLink");
-      links.forEach((link) => {
-        link.addEventListener("click", () => {
-          links.forEach((l) =>
-            l.classList.remove("active", "border-b-red-500")
-          );
-          link.classList.add("active", "border-b-red-500");
-        });
-      });
-    </script>
+    <script src="../../main.js"></script>
   </body>
 </html>

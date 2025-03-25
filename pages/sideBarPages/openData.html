@@ -1124,7 +1124,7 @@
         <!-- Toggle -->
         <div class="bg-grayClr3 text-white">
           <button
-            class="discoverToggle flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
+            class="showFooterBtn flex items-center gap-3 m-auto text-lg p-5 cursor-pointer"
           >
             <p>اكتشف المزيد</p>
             <span id="arrowIcon" class="duration-200">
@@ -1138,7 +1138,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   عن الهيئة
                   <span class="text-3xl md:hidden">+</span>
@@ -1165,7 +1165,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   المواصلات العامة
                   <span class="text-3xl md:hidden">+</span>
@@ -1192,7 +1192,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   السائقين ومالكي المركبات
                   <span class="text-3xl md:hidden">+</span>
@@ -1219,7 +1219,7 @@
                 class="flex flex-col gap-2 border-b md:border-0 w-full pb-2 md:w-fit"
               >
                 <h2
-                  class="footerSectionTitle text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
+                  class="footerlinksTitles text-lg md:text-2xl flex items-center justify-between font-bold cursor-pointer md:cursor-default"
                 >
                   قطاع الأعمال
                   <span class="text-3xl md:hidden">+</span>
@@ -1302,42 +1302,7 @@
     </main>
 
     <!-- script -->
-    <script>
-      // toggle nav
-      const aboutNavBtn = document.querySelector(".aboutNavBtn");
-      const aboutNavIcon = aboutNavBtn.querySelector("i");
-      const aboutNav = document.querySelector(".aboutNav");
-
-      aboutNavBtn.addEventListener("click", () => {
-        aboutNav.classList.toggle("flex");
-        aboutNav.classList.toggle("hidden");
-
-        if (aboutNavIcon.classList.contains("fa-bars")) {
-          aboutNavIcon.classList.remove("fa-bars");
-          aboutNavIcon.classList.add("fa-xmark");
-        } else {
-          aboutNavIcon.classList.remove("fa-xmark");
-          aboutNavIcon.classList.add("fa-bars");
-        }
-      });
-
-      // toggle fotter
-      const discoverToggle = document.querySelector(".discoverToggle");
-      const footerLinks = document.querySelector(".footerLinks");
-      const arrowIcon = document.querySelector("#arrowIcon");
-
-      discoverToggle.addEventListener("click", () => {
-        footerLinks.classList.toggle("hidden");
-        arrowIcon.classList.toggle("rotate-180");
-      });
-
-      const sectionTitles = document.querySelectorAll(".footerSectionTitle");
-      sectionTitles.forEach((title) => {
-        title.addEventListener("click", () => {
-          const sectionContent = title.nextElementSibling;
-          sectionContent.classList.toggle("hidden");
-        });
-      });
-    </script>
+    <script src="../../main.js"></script>
+    <script src="sideBar.js"></script>
   </body>
 </html>
