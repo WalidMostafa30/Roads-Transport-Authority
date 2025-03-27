@@ -136,29 +136,29 @@
       <nav
         class="sticky top-0 z-50 h-20 bg-redClr text-white font-bold text-lg"
       >
-        <!-- Desktop Nav -->
         <div
-          class="myContainer hidden lg:flex justify-between items-center h-full"
+          class="myContainer flex items-center justify-between text-sm md:text-lg h-full relative"
         >
-          <div class="flex items-center h-full">
+          <!-- Desktop Nav -->
+          <div class="hidden lg:flex items-center h-full">
             <a
               class="px-5 h-full content-center hover:bg-white hover:text-redClr duration-300"
-              href="../sideBarPages/about.html"
+              href="/pages/sideBarPages/about.html"
               >عن الهيئة</a
             >
             <a
               class="px-5 h-full content-center hover:bg-white hover:text-redClr duration-300"
-              href="../sideBarPages/mediaCenter.html"
+              href="/pages/sideBarPages/mediaCenter.html"
               >المركز الإعلامي</a
             >
             <a
               class="px-5 h-full content-center hover:bg-white hover:text-redClr duration-300"
-              href="../sideBarPages/openData.html"
+              href="/pages/sideBarPages/openData.html"
               >البيانات المفتوحة</a
             >
             <a
               class="px-5 h-full content-center hover:bg-white hover:text-redClr duration-300"
-              href="../sideBarPages/services.html"
+              href="/pages/sideBarPages/services.html"
               >الخدمات</a
             >
             <a
@@ -168,11 +168,12 @@
             >
             <a
               class="px-5 h-full content-center hover:bg-white hover:text-redClr duration-300"
-              href="../sideBarPages/contactUs.html"
+              href="/pages/sideBarPages/contactUs.html"
               >اتصل بنا</a
             >
           </div>
-          <div class="flex items-center h-full">
+
+          <div class="hidden lg:flex items-center h-full">
             <span
               class="px-5 h-full content-center hover:bg-white hover:text-redClr duration-300"
               >English</span
@@ -183,25 +184,22 @@
               <i class="fa-solid fa-magnifying-glass"></i>
             </span>
           </div>
-        </div>
 
-        <!-- Mobile Nav -->
-        <div
-          class="myContainer lg:hidden flex items-center justify-between text-sm md:text-lg h-full relative"
-        >
-          <div class="barsMenu">
+          <!-- Mobile Nav -->
+          <div class="barsMenu lg:hidden">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div class="flex items-center justify-between gap-3">
+
+          <div class="flex lg:hidden items-center justify-between gap-3">
             <a href="#">لوحة التحكم</a>
             <a href="#">تسجيل الدخول</a>
             <button>English</button>
           </div>
 
           <div
-            class="smallNavLinks absolute z-50 left-0 top-full w-full bg-redClr flex-col duration-300"
+            class="smallNavLinks lg:hidden absolute z-50 left-0 top-full w-full bg-redClr flex-col duration-300"
           >
             <a
               href="/"
@@ -213,14 +211,14 @@
               الصفحة الرئيسية
             </a>
             <a
-              href="../sideBarPages/about.html"
+              href="pages/sideBarPages/about.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"><i class="fa-solid fa-globe"></i></span>
               عن الهيئة
             </a>
             <a
-              href="../sideBarPages/mediaCenter.html"
+              href="pages/sideBarPages/mediaCenter.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl">
@@ -229,7 +227,7 @@
               المركز الإعلامي
             </a>
             <a
-              href="../sideBarPages/openData.html"
+              href="pages/sideBarPages/openData.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"
@@ -238,7 +236,7 @@
               البيانات المفتوحة
             </a>
             <a
-              href="../sideBarPages/services.html"
+              href="pages/sideBarPages/services.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"
@@ -247,7 +245,7 @@
               خدماتنا
             </a>
             <a
-              href="../sideBarPages/contactUs.html"
+              href="pages/sideBarPages/contactUs.html"
               class="flex items-center gap-3 w-full py-4 px-6 duration-300"
             >
               <span class="text-3xl"

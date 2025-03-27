@@ -4,8 +4,14 @@ document.querySelectorAll(".barsMenu").forEach((menuToggle) => {
     const smallNav = menuToggle
       .closest(".myContainer")
       .querySelector(".smallNavLinks");
-    menuToggle.classList.toggle("open");
     smallNav.classList.toggle("open");
+    if (menuToggle.classList.contains("open")) {
+      menuToggle.classList.remove("open");
+      menuToggle.classList.add("close");
+    } else {
+      menuToggle.classList.remove("close");
+      menuToggle.classList.add("open");
+    }
   });
 });
 
